@@ -79,6 +79,7 @@ function factorial(number) {
 
 // console.log(factorial(5));
 
+// ***********************
 
 // Write a method that accepts one argument - an array of numbers that are in ascending order. The method that returns a new array with the same values in descending order. However, do not use the "reverse" method built in to Ruby.
 //
@@ -93,3 +94,39 @@ function factorial(number) {
 // end
 // p descending([1, 3, 5, 7])
 
+function descending(input) {
+  var output = [];
+  for (var i = input.length-1; i >= 0; i-- ) {
+    output.push(input[i]);
+  }
+  return output;
+}
+
+// console.log(descending([1, 3, 5, 7]));
+
+// ***********************
+
+// Write a method that accepts two arrays of numbers, and returns an array of every sum of every combination of single numbers from first and second array. For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should return this array: [101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
+// 
+// def sum_combinations(numbers_1, numbers_2)
+//   result = []
+//   numbers_1.each do |number_1|
+//     numbers_2.each do |number_2|
+//       result << number_1 + number_2
+//     end
+//   end
+//   result
+// end
+// p sum_combinations([1, 5, 10], [100, 500, 1000])
+
+function sumCombinations(input1, input2) {
+  var output = [];
+  input1.forEach(function(input1) {
+    input2.forEach(function(input2){
+      output.push(input1+input2);
+    });
+  });
+return output;
+}
+
+console.log(sumCombinations([1, 5, 10], [100, 500, 1000]));
